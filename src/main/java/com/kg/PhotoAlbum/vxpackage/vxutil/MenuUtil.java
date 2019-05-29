@@ -52,7 +52,7 @@ public class MenuUtil {
                   "&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect");
             //创建其他类型的菜单与click型用法一致
             ClickButton button31 = new ClickButton();
-            button31.setName("拍照发图");
+            button31.setName("立拍");
             button31.setType("pic_photo_or_album");
             button31.setKey("31");
 

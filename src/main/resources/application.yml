@@ -1,0 +1,28 @@
+
+
+spring:
+  thymeleaf:
+    mode: HTML5
+    encoding: UTF-8
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot?characterEncoding=UTF-8&useSSL=true
+    username: root
+    password: root
+    hikari:
+      connection-timeout: 60000
+mybatis:
+  mapperLocations: classpath*:static/mapper/*.xml
+  typeAliasesPackage: com.kg.PhotoAlum.model
+# spring-boot默认打印输出info级别以上的，可在此处修改输出级别
+logging:
+  level:
+    root: info
+server:
+  port: 8088
+
+appid: wxdeba2c4731f21fae
+appsecret: ae2e5683f341ae26c329149147e12399
+wx:
+  getaccess_token: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${appid}&secret=${appsecret}
+upload_url: https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&type=TYPE
